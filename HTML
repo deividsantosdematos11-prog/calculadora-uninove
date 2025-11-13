@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Integralização UNINOVE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Uninove.svg/1200px-Uninove.svg.png" alt=>
+            <span class="title-text">CALCULADORA PARA INTEGRALIZAÇÃO</span>
+            <img class="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Uninove.svg/1200px-Uninove.svg.png" alt=>
+        </div>
+        <div class="content">
+            <div class="input-group">
+                <div class="input-item">
+                    <label for="anoSemestreInicio">ANO/SEMESTRE DE INÍCIO</label>
+                    <select id="anoSemestreInicio"></select>
+                </div>
+                <div class="input-item">
+                    <label for="qtdSemestre">QTD. DE SEMESTRE</label>
+                    <input type="number" id="qtdSemestre" value="5" min="1">
+                </div>
+                <div class="input-item">
+                    <label for="qtdTrancamentos">QTD. DE TRANCAMENTOS</label>
+                    <input type="number" id="qtdTrancamentos" value="0" min="0">
+                </div>
+            </div>
+            <div class="result">
+                Até:: <span id="resultadoIntegralizacao">2027-02</span>
+            </div>
+            <button class="reset-button" onclick="resetCalculadora()">RESET</button>
+        </div>
+        <div class="notes">
+            <p>* Esta calculadora não serve para o curso de Licenciatura Em Pedagogia (Polo).</p>
+            <p>** Para o aluno que participou do programa "Acelere seu Futuro" levar em consideração o ano e semestre de retorno.</p>
+            <p>*** Esta calculadora não serve para os cursos de "Pós-Graduação"</p>
+        </div>
+        <div class="footer">
+            <p>Copyright© 2025- 2025 UNINOVE - Análise Curricular - VG. Todos os direitos reservados. All Rights Reserved DEIVID</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
