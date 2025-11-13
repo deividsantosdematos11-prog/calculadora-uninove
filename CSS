@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Fonte mais moderna */
+    background-color: #f0f2f5; /* Fundo mais suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    color: #333; /* Cor de texto padrão mais escura */
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada e suave */
+    width: 100%;
+    max-width: 850px; /* Um pouco mais largo */
+    overflow: hidden;
+    transition: all 0.3s ease; /* Transição suave para futuras interações */
+}
+
+.header {
+    background-color: #e41e2a; /* Vermelho UNINOVE */
+    padding: 25px 20px; /* Mais padding */
+    text-align: center;
+    font-size: 26px; /* Tamanho da fonte ligeiramente maior */
+    font-weight: 700; /* Peso da fonte mais forte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white; /* Cor do texto no header (será sobrescrita pelo span) */
+}
+
+.header .title-text {
+    color: #e41e2a; /* Vermelho UNINOVE */
+    background-color: #ffffff; /* Fundo branco para o texto */
+    padding: 8px 20px; /* Mais padding */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    letter-spacing: 0.5px; /* Pequeno espaçamento entre letras */
+    text-transform: uppercase; /* Texto em maiúsculas */
+}
+
+.header img {
+    height: 45px; /* Logos ligeiramente maiores */
+    position: absolute;
+    left: 25px; /* Ajuste da posição */
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2)); /* Sombra para a logo */
+}
+
+.header img.right {
+    left: auto;
+    right: 25px; /* Ajuste da posição */
+}
+
+.content {
+    padding: 40px; /* Mais padding interno */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Mais espaçamento entre os grupos */
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px; /* Mais espaçamento */
+    flex-wrap: wrap;
+}
+
+.input-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha labels à esquerda */
+    flex: 1;
+    min-width: 200px; /* Largura mínima maior */
+}
+
+.input-item label {
+    font-weight: 600; /* Peso da fonte médio */
+    margin-bottom: 10px; /* Mais espaçamento */
+    color: #555;
+    font-size: 15px; /* Fonte ligeiramente maior */
+    text-align: left; /* Alinha o label à esquerda */
+    text-transform: uppercase; /* Labels em maiúsculas */
+    letter-spacing: 0.5px;
+}
+
+.input-item select,
+.input-item input[type="number"] {
+    width: 100%;
+    padding: 12px 15px; /* Mais padding */
+    border: 1px solid #dcdcdc; /* Borda mais clara */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 16px;
+    text-align: center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fdfdfd; /* Fundo quase branco */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Sombra interna suave */
+    transition: all 0.3s ease;
+}
+
+.input-item select:focus,
+.input-item input[type="number"]:focus {
+    border-color: #e41e2a; /* Borda vermelha ao focar */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(228, 30, 42, 0.2); /* Brilho suave ao focar */
+}
+
+/* Estilo para a seta do select */
+.input-item select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e41e2a%22%20d%3D%22M287%20197.3L159.9%2069.1c-3-3.1-6.7-4.6-10.8-4.6-4.1%200-7.9%201.5-10.8%204.6L5.3%20197.3c-3%203.1-4.6%207.2-4.6%2011.6%200%204.4%201.6%208.5%204.6%2011.6l21.9%2022.1c3.1%203%207.2%204.6%2011.6%204.6s8.5-1.6%2011.6-4.6l106.3-107.1%20106.3%20107.1c3.1%203%207.2%204.6%2011.6%204.6s8.5-1.6%2011.6-4.6l21.9-22.1c3.1-3%204.6-7.2%204.6-11.6.1-4.4-1.5-8.5-4.5-11.6z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 35px; /* Espaço para a seta */
+}
+
+
+.result {
+    margin-top: 40px; /* Mais espaçamento */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Mais espaçamento */
+    font-size: 32px; /* Resultado maior */
+    font-weight: 700; /* Peso da fonte mais forte */
+    color: #333;
+}
+
+.result span {
+    color: #e41e2a; /* Vermelho UNINOVE */
+    letter-spacing: 1px;
+}
+
+.reset-button {
+    background-color: #e41e2a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 65px; /* Botão ligeiramente maior */
+    height: 65px;
+    font-size: 13px; /* Fonte ligeiramente maior */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Mais espaçamento */
+    align-self: flex-end;
+    margin-right: 40px; /* Alinha com o padding do content */
+    box-shadow: 0 5px 15px rgba(228, 30, 42, 0.4); /* Sombra mais destacada */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.reset-button:hover {
+    background-color: #c01a24; /* Vermelho mais escuro ao hover */
+    transform: translateY(-2px); /* Efeito de levantar */
+    box-shadow: 0 8px 20px rgba(228, 30, 42, 0.5); /* Sombra maior ao hover */
+}
+
+.notes {
+    margin-top: 25px; /* Mais espaçamento */
+    font-size: 12px; /* Fonte ligeiramente menor para as notas */
+    color: #888; /* Cor mais suave */
+    padding: 0 40px; /* Alinha com o padding do content */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+}
+
+.footer {
+    background-color: #2c3e50; /* Um cinza/azul escuro para o footer */
+    color: #ecf0f1; /* Cor de texto mais clara */
+    text-align: center;
+    padding: 18px; /* Mais padding */
+    font-size: 12px;
+    margin-top: 30px; /* Mais espaçamento */
+    letter-spacing: 0.3px;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .header {
+        font-size: 22px;
+        padding: 20px 15px;
+    }
+    .header img {
+        height: 35px;
+        left: 15px;
+    }
+    .header img.right {
+        right: 15px;
+    }
+    .content {
+        padding: 30px;
+        gap: 25px;
+    }
+    .input-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .input-item {
+        align-items: center; /* Centraliza labels em telas menores */
+    }
+    .input-item label {
+        text-align: center;
+    }
+    .result {
+        font-size: 28px;
+        margin-top: 30px;
+    }
+    .reset-button {
+        width: 60px;
+        height: 60px;
+        margin-right: 30px;
+        margin-top: 30px;
+    }
+    .notes {
+        padding: 0 30px;
+    }
+}
